@@ -13,7 +13,6 @@
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -28,7 +27,6 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="Cancel"
-            android:onClick="@{()-> activity.onBackPressed()}"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/txt_big_size"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -60,8 +58,6 @@
             android:hint="account"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="@{model.name.toString()}"
-            android:onTextChanged="@{(text, start, before, count)->model.onNameChange(text)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/et_pwd"
             app:layout_constraintHeight_default="percent"
@@ -83,9 +79,6 @@
             android:drawableStart="@drawable/ic_pwd"
             android:drawablePadding="10dp"
             android:hint="password"
-            android:text="@{model.pwd.toString()}"
-            android:onTextChanged="@{(text, start, before, count)->model.onPwdChange(text)}"
-
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_login"
@@ -105,8 +98,6 @@
             android:layout_marginEnd="20dp"
             android:background="@drawable/shape_main_recycle_item_primary"
             android:text="Sign in"
-            android:onClick="@{()-> model.login()}"
-            android:enabled="@{model.name.toString().empty || model.pwd.toString().empty? false: true}"
             android:textSize="@dimen/txt_big_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHeight_default="percent"
