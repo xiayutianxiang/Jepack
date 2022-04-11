@@ -6,10 +6,10 @@
     app:startDestination="@id/infoFragment">
 
     <fragment
-        android:id="@+id/infoFragment"
-        android:name="com.example.jectpack.ui.fragment.main.InfoFragment"
-        android:label="InfoFragment"
-        tools:layout="@layout/fragment_info"/>
+        android:id="@+id/shoeFragment"
+        android:name="com.example.jectpack.ui.fragment.main.ShoeFragment"
+        android:label="ShoeFragment"
+        tools:layout="@layout/fragment_shoe"/>
     <fragment
         android:id="@+id/marketFragment"
         android:name="com.example.jectpack.ui.fragment.main.MarketFragment"
